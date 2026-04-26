@@ -1,0 +1,78 @@
+{
+    // GLOBAL VS CODE USER SETTINGS 
+
+    "diffEditor.renderSideBySide": true,
+
+    "editor.wordWrap": "on",
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "files.autoSave": "afterDelay",
+    
+    "files.exclude": {
+        "**/.git": false
+    },
+    "files.associations": {
+        "*.sh": "shellscript",
+		"*.inc": "shellscript",
+        "**/.github/workflows/*.{yml,yaml}": "yaml",
+        "**/Taskfile.{yml,yaml}": "yaml"
+    },
+
+    // =====  GEMINI CODE ASSIST =====
+    "geminicodeassist.enable": false,
+    "geminicodeassist.inlineSuggestions.enableAuto": false,
+
+    // =====  GIT =====
+    "git.openRepositoryInParentFolders": "never",
+
+    // =====  GITHUB COPILOT =====
+    "github.copilot.enable": {
+        "*": false,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false
+    },
+
+    // =====  Jupyter Notebook Settings  =====
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "right"
+    },
+    "notebook.editorOptionsCustomizations": {
+        "editor.tabSize": 4,
+        "editor.indentSize": 4,
+        "editor.insertSpaces": true
+    },
+    "notebook.lineNumbers": "on",
+    "notebook.output.scrolling": true,
+    "notebook.output.textLineLimit": 50,
+
+    // =====  Python Settings  =====
+    //"python.defaultInterpreterPath": "PATH\TO\PYTHON",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",  
+            "source.organizeImports.ruff": "explicit"    //Sort Imports on save
+        }
+        // Optional: Hide the standard VS Code linting to avoid double-underlines when using Ruff
+    	// "python.analysis.ignore": ["*"],
+    },
+
+    // =====  Ruff Extension Behavior  =====
+    //"ruff.configuration": "PATH\TO\RUFF\CONFIG\FILE\pyproject.toml",  // use this specific file if no config file found in project folder
+    "ruff.configurationPreference": "filesystemFirst",  //it looks for a pyproject.toml in your project first. If it finds one, it uses it. If not, it falls back to your "linked" path.
+    "ruff.importStrategy": "fromEnvironment", // Prefers ruff from your Anaconda env if installed there
+    "ruff.nativeServer": "on", // Uses the high-performance Rust server
+    "ruff.path": [], // Leave empty to auto-detect, or point to your specific ruff.exe if it fails
+    
+    // "terminal.integrated.defaultProfile.windows": "Command Prompt",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+
+    "workbench.colorTheme": "Dark Modern",
+
+    "workbench.secondarySideBar.defaultVisibility": "hidden"
+}
